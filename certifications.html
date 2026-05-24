@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Certifications | Fortitude Fabrics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .micro-weave {
+            background-image: radial-gradient(#242833 0.5px, transparent 0.5px);
+            background-size: 4px 4px;
+            opacity: 0.05;
+        }
+        .glass-nav {
+            backdrop-filter: blur(8px);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        #mobile-menu.hidden { display: none; }
+        #mobile-menu:not(.hidden) { display: flex; }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#79849b",
+                    "deep-onyx": "#121212",
+                    "secondary-container": "#0056fd",
+                    "on-background": "#181c20",
+                    "tertiary-fixed-dim": "#41ddc2",
+                    "tertiary": "#000000",
+                    "on-primary-fixed": "#101c2e",
+                    "on-primary": "#ffffff",
+                    "secondary": "#0042c7",
+                    "surface-container-high": "#e6e8ed",
+                    "on-secondary-fixed": "#001550",
+                    "surface-variant": "#e0e2e7",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#d7e3fc",
+                    "surface-container-highest": "#e0e2e7",
+                    "outline": "#75777d",
+                    "tertiary-container": "#00201b",
+                    "primary": "#000000",
+                    "surface": "#f7f9fe",
+                    "outline-variant": "#c5c6cd",
+                    "inverse-primary": "#bbc7df",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dce1ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eceef3",
+                    "on-surface-variant": "#45474c",
+                    "inverse-surface": "#2d3135",
+                    "tertiary-fixed": "#65fade",
+                    "surface-dim": "#d8dadf",
+                    "slate-steel": "#242833",
+                    "inverse-on-surface": "#eff1f6",
+                    "surface-tint": "#535f74",
+                    "on-secondary-fixed-variant": "#003ab2",
+                    "on-tertiary-fixed": "#00201b",
+                    "surface-container-low": "#f1f4f9",
+                    "on-tertiary-container": "#009580",
+                    "primary-fixed-dim": "#bbc7df",
+                    "on-primary-fixed-variant": "#3c475b",
+                    "background": "#f7f9fe",
+                    "signal-red": "#ED1A22",
+                    "surface-bright": "#f7f9fe",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#b6c4ff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#101c2e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#181c20",
+                    "on-tertiary-fixed-variant": "#005045",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#e4e7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "mono-technical": ["IBM Plex Sans"],
+                    "display-lg-mobile": ["Barlow Condensed"],
+                    "headline-md": ["Barlow Condensed"],
+                    "display-lg": ["Barlow Condensed"],
+                    "label-caps": ["IBM Plex Sans"],
+                    "body-sm": ["IBM Plex Sans"],
+                    "body-md": ["IBM Plex Sans"],
+                    "body-lg": ["IBM Plex Sans"],
+                    "headline-sm": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "mono-technical": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background font-body-md text-on-surface selection:bg-secondary/20 overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-outline-variant/30 h-20 md:h-28 bg-white">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<a href="index.html"><img alt="Fortitude Fabrics Logo" class="h-16 md:h-24 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uj00okJCjn1XroVeQfNQrdpEwHb0-40VjhWD5PkyKpnuisF6OPupq7UDJHGUejOq0Ui8WvbFWGLkiZYqAAp-xcgAPrzT0tdZR5Gg-Ojbj1iSI9BYb0u99vxCCTZohoLcwJepMfHfiWHQGJhNSlGwYZaEsAHj_7OOameVMmCdodaVYgMjQ3BKksy80V2MiOSOUFFWcg-BTYgx2uWg_AEh-C2PU_8ohIrx2pFRxmSMAmX3kpm0FRTV2tP2vbzjVBtdZEKJivCtvYeQg"/></a>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden lg:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="products.html">Materials</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="industries.html">Industries</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="insights.html">Innovation</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="certifications.html">Quality</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="about.html">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block bg-secondary text-white px-6 py-3 font-label-caps text-label-caps uppercase hover:opacity-90 transition-all" onclick="window.location.href='quote.html'">Request Quote</button>
+<!-- Hamburger Menu Button -->
+<button class="lg:hidden p-2 text-on-surface" id="menu-toggle">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="hidden fixed inset-0 top-16 bg-surface-container-lowest z-40 flex-col p-margin-mobile space-y-6 lg:hidden" id="mobile-menu">
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="products.html">Materials</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="industries.html">Industries</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="insights.html">Innovation</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="certifications.html">Quality</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="about.html">About</a>
+<button class="w-full bg-secondary text-white py-4 font-label-caps text-label-caps uppercase mt-4" onclick="window.location.href='quote.html'">Request Quote</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-surface py-12 md:py-32 overflow-hidden blueprint-grid border-b border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block bg-primary text-white font-mono-technical px-3 py-1 mb-6">CERTIFICATION_VERIFIED: 2024</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg uppercase text-on-background mb-4">
+                        Certified Performance.<br/><span class="text-secondary">Verified Quality.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                        A commitment to industrial technical excellence. Our manufacturing ecosystem operates under rigorous clinical standards, ensuring high-fidelity integrity for every textile fiber.
+                    </p>
+<div class="flex flex-wrap gap-3 md:gap-4">
+<div class="flex items-center gap-2 border border-slate-steel/20 bg-white px-3 md:px-4 py-2 shrink-0">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="font-label-caps text-[10px] md:text-xs">ISO 9001:2015</span>
+</div>
+<div class="flex items-center gap-2 border border-slate-steel/20 bg-white px-3 md:px-4 py-2 shrink-0">
+<span class="material-symbols-outlined text-secondary">clean_hands</span>
+<span class="font-label-caps text-[10px] md:text-xs">ISO 14644-1</span>
+</div>
+<div class="flex items-center gap-2 border border-slate-steel/20 bg-white px-3 md:px-4 py-2 shrink-0">
+<span class="material-symbols-outlined text-secondary">bolt</span>
+<span class="font-label-caps text-[10px] md:text-xs">IEC 61340-5-1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Visual -->
+<div class="absolute right-0 top-0 h-full w-1/3 hidden lg:block border-l border-outline-variant/30 bg-surface-container-low overflow-hidden">
+<img alt="High-precision industrial laboratory environment" class="w-full h-full object-cover opacity-80 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwmhXwoO9AQQ9l29Jq5ihbPZBZVtinrKWv0vYAY3ZoDFcDKwxstJKLtbBU04xoqgE6epD-KPu6YoPmhKdRSLLZY9ONSxT0UVKZ6BlsHnnNJfWZ3A2Fw4dfToqx2vS2arQo8KPHS2FF73mNJT_vH3HDKz1xchFEHQFyr06udSQF9xZQjn_QsCP-1nocG0kEhPHNe1Um-srZ4PPkSGzRuuSq6cAzcJqqcJbyoAAC87SnnDh5lFlw_lfbvBIeqdVYsc8VZfF4L8IF879o"/>
+</div>
+</section>
+<!-- Compliance Grid -->
+<section class="py-12 md:py-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- ISO 9001 Section -->
+<div class="md:col-span-8 bg-white border border-slate-steel/10 p-6 md:p-8 relative">
+<div class="micro-weave absolute top-0 left-0 right-0 h-2"></div>
+<div class="flex justify-between items-start mb-8 md:mb-12">
+<div>
+<h2 class="font-headline-md text-xl md:text-headline-md uppercase text-on-surface">Quality Management Systems</h2>
+<p class="text-secondary font-mono-technical">Standard: ISO 9001:2015</p>
+</div>
+<span class="material-symbols-outlined text-3xl md:text-4xl text-on-surface-variant/20">settings_input_component</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                        Our quality management system is the backbone of our operations. We maintain a zero-failure tolerance policy across the entire production chain, from raw polymer procurement to final precision weaving.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-4 border-l-2 border-secondary">
+<div class="font-label-caps mb-2 text-on-surface-variant">Traceability</div>
+<div class="font-body-sm text-body-sm">100% batch-to-source tracking for all raw materials.</div>
+</div>
+<div class="bg-surface-container-low p-4 border-l-2 border-secondary">
+<div class="font-label-caps mb-2 text-on-surface-variant">Inspection</div>
+<div class="font-body-sm text-body-sm">Automated optical inspection (AOI) at 5 micron resolution.</div>
+</div>
+<div class="bg-surface-container-low p-4 border-l-2 border-secondary">
+<div class="font-label-caps mb-2 text-on-surface-variant">Reporting</div>
+<div class="font-body-sm text-body-sm">Individualized quality verification certificates per roll.</div>
+</div>
+</div>
+</div>
+<!-- ESD Section -->
+<div class="md:col-span-4 bg-slate-steel text-white p-8">
+<div class="flex flex-col h-full">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">bolt</span>
+<h3 class="font-headline-sm text-headline-sm uppercase mb-4">ESD &amp; Antistatic Integrity</h3>
+<p class="font-body-sm text-body-sm text-surface-variant/80 mb-8">
+                            Testing protocols aligned with IEC 61340 standards for dissipative and conductive textile performance in micro-electronic environments.
+                        </p>
+<div class="mt-auto space-y-3">
+<div class="flex justify-between border-b border-white/10 pb-2">
+<span class="font-mono-technical text-xs">Surface Resistance</span>
+<span class="font-mono-technical text-xs text-right">10⁶ - 10⁹ Ω</span>
+</div>
+<div class="flex justify-between border-b border-white/10 pb-2">
+<span class="font-mono-technical text-xs">Decay Time</span>
+<span class="font-mono-technical text-xs text-right">&lt; 0.01 sec</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Fabric Performance -->
+<div class="md:col-span-6 bg-white border border-slate-steel/10 p-6 md:p-8">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">architecture</span>
+                        Mechanical Testing
+                    </h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 md:w-16 md:h-16 bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">straighten</span>
+</div>
+<div>
+<h4 class="font-label-caps text-on-surface">Tensile Strength (ISO 13934)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verification of warp/weft breaking force and elongation under extreme industrial load conditions.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 md:w-16 md:h-16 bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<div>
+<h4 class="font-label-caps text-on-surface">Seam Integrity</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Evaluation of seam strength and slippage using high-tensile technical thread configurations.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 md:w-16 md:h-16 bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">refresh</span>
+</div>
+<div>
+<h4 class="font-label-caps text-on-surface">Martindale Abrasion</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Resistance testing exceeding 100,000 cycles for extreme durability environments.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Barrier & Cleanroom -->
+<div class="md:col-span-6 bg-surface-container-lowest border border-slate-steel/10 overflow-hidden">
+<div class="p-6 md:p-8 pb-0">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-2">Barrier &amp; Cleanroom Compliance</h3>
+<p class="text-secondary font-mono-technical mb-6">ISO 14644-1: Class 1 - 9 Verification</p>
+</div>
+<img alt="Microscopic weave structure" class="w-full h-48 object-cover border-y border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbTtU2jfXQ5CQ4My27x8r1HbO_IMTGjnRhi2yeR_LexJEKMSXfdNCBCwYMdTy5_0PgnHwosGbLgfnjmVLA25xWYzNCXO9DDDuBKNDk0tLoDzuiKILgNIVkcH8FnDQvGVes-172OyBk0kga8r5d3H50EK7zQ_F_N8OatjgxSVd5Y0HCj_tw4EUQlOCWcXJfdZD6Ad-oH_PFeKUphhoL0ulNFoMADJHKo8WizW1IVfDwbkCeXLgS7Jj-OCfwpFi1S8MY1FBjhDE566VT"/>
+<div class="p-6 md:p-8 pt-6">
+<ul class="space-y-3">
+<li class="flex items-start gap-3 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-green-600 text-sm mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Particulate filtration efficiency (PFE) &gt; 99% @ 0.3μm
+                            </li>
+<li class="flex items-start gap-3 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-green-600 text-sm mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Low-linting technical filament yarns
+                            </li>
+<li class="flex items-start gap-3 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-green-600 text-sm mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Gamma radiation compatibility for sterilization
+                            </li>
+</ul>
+</div>
+</div>
+<!-- Environmental -->
+<div class="md:col-span-12 bg-white border border-slate-steel/10 p-6 md:p-8 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+<div class="max-w-2xl">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-4">Environmental &amp; Chemical Compliance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            We ensure full adherence to international chemical safety regulations. All Fortitude Fabrics materials are screened for SVHC (Substances of Very High Concern).
+                        </p>
+</div>
+<div class="flex flex-wrap md:flex-nowrap gap-4 md:gap-8 shrink-0 w-full md:w-auto">
+<div class="text-center group flex-1 md:flex-none">
+<div class="w-full md:w-20 h-20 border border-slate-steel flex items-center justify-center mb-2 group-hover:bg-slate-steel group-hover:text-white transition-colors">
+<span class="font-bold text-lg">REACH</span>
+</div>
+<span class="font-label-caps text-[10px] md:text-xs">Certified</span>
+</div>
+<div class="text-center group flex-1 md:flex-none">
+<div class="w-full md:w-20 h-20 border border-slate-steel flex items-center justify-center mb-2 group-hover:bg-slate-steel group-hover:text-white transition-colors">
+<span class="font-bold text-lg">RoHS</span>
+</div>
+<span class="font-label-caps text-[10px] md:text-xs">Compliant</span>
+</div>
+<div class="text-center group flex-1 md:flex-none">
+<div class="w-full md:w-20 h-20 border border-slate-steel flex items-center justify-center mb-2 group-hover:bg-slate-steel group-hover:text-white transition-colors">
+<span class="font-bold text-lg">PFAS</span>
+</div>
+<span class="font-label-caps text-[10px] md:text-xs">Free</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Table Section -->
+<section class="py-12 md:py-20 bg-surface-container">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h3 class="font-headline-md text-headline-md uppercase mb-8">Detailed Verification Matrix</h3>
+<div class="overflow-x-auto -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+<table class="w-full border-collapse min-w-[600px]">
+<thead>
+<tr class="bg-primary text-white text-left uppercase font-label-caps">
+<th class="p-4 border-r border-white/10 text-xs md:text-sm">Parameter</th>
+<th class="p-4 border-r border-white/10 text-xs md:text-sm">Testing Method</th>
+<th class="p-4 border-r border-white/10 text-xs md:text-sm">Min Requirement</th>
+<th class="p-4 text-xs md:text-sm">Verification Status</th>
+</tr>
+</thead>
+<tbody class="font-body-sm">
+<tr class="bg-white border-b border-outline-variant/30 transition-colors hover:bg-secondary/5">
+<td class="p-4 font-bold border-r border-outline-variant/30">Pore Size Diameter</td>
+<td class="p-4 border-r border-outline-variant/30">ASTM F316</td>
+<td class="p-4 border-r border-outline-variant/30">0.2 - 15 microns</td>
+<td class="p-4 text-green-700 font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span> <span class="text-[10px] md:text-xs uppercase">Quality Passed</span>
+</td>
+</tr>
+<tr class="bg-surface-container-low border-b border-outline-variant/30 transition-colors hover:bg-secondary/5">
+<td class="p-4 font-bold border-r border-outline-variant/30">Air Permeability</td>
+<td class="p-4 border-r border-outline-variant/30">ISO 9237</td>
+<td class="p-4 border-r border-outline-variant/30">5.0 - 50 L/m²/s</td>
+<td class="p-4 text-green-700 font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span> <span class="text-[10px] md:text-xs uppercase">Quality Passed</span>
+</td>
+</tr>
+<tr class="bg-white border-b border-outline-variant/30 transition-colors hover:bg-secondary/5">
+<td class="p-4 font-bold border-r border-outline-variant/30">Liquid Penetration</td>
+<td class="p-4 border-r border-outline-variant/30">ISO 6530</td>
+<td class="p-4 border-r border-outline-variant/30">Class 3 (Max Protection)</td>
+<td class="p-4 text-green-700 font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span> <span class="text-[10px] md:text-xs uppercase">Quality Passed</span>
+</td>
+</tr>
+<tr class="bg-surface-container-low transition-colors hover:bg-secondary/5">
+<td class="p-4 font-bold border-r border-outline-variant/30">Biocompatibility</td>
+<td class="p-4 border-r border-outline-variant/30">ISO 10993</td>
+<td class="p-4 border-r border-outline-variant/30">Non-cytotoxic</td>
+<td class="p-4 text-green-700 font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span> <span class="text-[10px] md:text-xs uppercase">Quality Passed</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="py-12 md:py-20 border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h3 class="font-headline-md text-headline-md uppercase mb-4">Integrate Certified Quality</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                    Download full technical data sheets or speak with a material engineer to verify compatibility with your specific application.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-white px-10 py-5 font-label-caps uppercase press-effect hover:bg-slate-steel transition-all w-full sm:w-auto min-h-[56px] flex items-center justify-center">
+                        Download Tech Specs
+                    </button>
+<button class="border-2 border-primary text-primary px-10 py-5 font-label-caps uppercase press-effect hover:bg-primary hover:text-white transition-all w-full sm:w-auto min-h-[56px] flex items-center justify-center">
+                        Contact Engineering
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-onyx text-white border-t border-slate-steel">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<a href="index.html"><img alt="Fortitude Fabrics Logo" class="h-20 mb-6" src="https://lh3.googleusercontent.com/aida/ADBb0uj00okJCjn1XroVeQfNQrdpEwHb0-40VjhWD5PkyKpnuisF6OPupq7UDJHGUejOq0Ui8WvbFWGLkiZYqAAp-xcgAPrzT0tdZR5Gg-Ojbj1iSI9BYb0u99vxCCTZohoLcwJepMfHfiWHQGJhNSlGwYZaEsAHj_7OOameVMmCdodaVYgMjQ3BKksy80V2MiOSOUFFWcg-BTYgx2uWg_AEh-C2PU_8ohIrx2pFRxmSMAmX3kpm0FRTV2tP2vbzjVBtdZEKJivCtvYeQg"/></a>
+<p class="font-body-sm text-on-primary-container mb-8">Technical textiles and industrial workwear precision-engineered in Hyderabad, India for the global market.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-6 md:mb-8">Contact HQ</h4>
+<div class="space-y-4 font-body-sm text-on-primary-container">
+<p class="flex items-start gap-3"><span class="material-symbols-outlined text-white text-base">location_on</span>Plot 124, Industrial Area Phase II,<br/>Hyderabad, Telangana, 500072</p>
+<p class="flex items-center gap-3"><span class="material-symbols-outlined text-white text-base">call</span>+91 40 2300 8899</p>
+<p class="flex items-center gap-3"><span class="material-symbols-outlined text-white text-base">mail</span>inquiry@fortitudefabrics.com</p>
+</div>
+</div>
+<div class="hidden sm:block">
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-8">Quick Links</h4>
+<ul class="space-y-3 font-body-sm text-on-primary-container">
+<li><a class="hover:text-white transition-all" href="#">Antistatic Data</a></li>
+<li><a class="hover:text-white transition-all" href="#">Cleanroom Guidelines</a></li>
+<li><a class="hover:text-white transition-all" href="#">Sustainability</a></li>
+<li><a class="hover:text-white transition-all" href="#">ISO Docs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-6 md:mb-8">Compliance</h4>
+<ul class="space-y-3 font-body-sm text-on-primary-container">
+<li><a class="hover:text-white transition-all" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-all" href="#">Terms of Service</a></li>
+<li><a class="hover:text-white transition-all" href="#">Material SDS</a></li>
+</ul>
+<div class="mt-8 border-t border-slate-steel pt-6">
+<span class="font-mono-technical text-mono-technical text-on-primary-container uppercase text-[10px]">© 2024 Fortitude Fabrics.</span>
+</div>
+</div>
+</div>
+<div class="bg-black py-4 text-center border-t border-slate-steel px-margin-mobile">
+<p class="font-mono-technical text-[10px] text-on-primary-container uppercase tracking-widest">TEX-ENGINEERED MANUFACTURING • TECHNICAL PRECISION GUARANTEED</p>
+</div>
+</footer>
+<script>
+        // Sticky header opacity effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+<script>
+    function toggleAccordion(id) {
+        const content = document.getElementById(`content-${id}`);
+        const icon = document.getElementById(`icon-${id}`);
+        const isHidden = content.classList.contains('hidden');
+        
+        // Close all
+        document.querySelectorAll('[id^="content-"]').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('[id^="icon-"]').forEach(el => el.innerText = 'add');
+
+        if (isHidden) {
+            content.classList.remove('hidden');
+            icon.innerText = 'remove';
+        }
+    }
+
+    // Mobile Menu Logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuToggle.querySelector('.material-symbols-outlined');
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+            mobileMenu.classList.add('hidden');
+            menuIcon.innerText = 'menu';
+            document.body.style.overflow = '';
+        } else {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.innerText = 'close';
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    // Close menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.innerText = 'menu';
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.</script></body></html>

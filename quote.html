@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#79849b",
+                    "deep-onyx": "#121212",
+                    "secondary-container": "#0056fd",
+                    "on-background": "#181c20",
+                    "tertiary-fixed-dim": "#41ddc2",
+                    "tertiary": "#000000",
+                    "on-primary-fixed": "#101c2e",
+                    "on-primary": "#ffffff",
+                    "secondary": "#0042c7",
+                    "surface-container-high": "#e6e8ed",
+                    "on-secondary-fixed": "#001550",
+                    "surface-variant": "#e0e2e7",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#d7e3fc",
+                    "surface-container-highest": "#e0e2e7",
+                    "outline": "#75777d",
+                    "tertiary-container": "#00201b",
+                    "primary": "#000000",
+                    "surface": "#f7f9fe",
+                    "outline-variant": "#c5c6cd",
+                    "inverse-primary": "#bbc7df",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dce1ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eceef3",
+                    "on-surface-variant": "#45474c",
+                    "inverse-surface": "#2d3135",
+                    "tertiary-fixed": "#65fade",
+                    "surface-dim": "#d8dadf",
+                    "slate-steel": "#242833",
+                    "inverse-on-surface": "#eff1f6",
+                    "surface-tint": "#535f74",
+                    "on-secondary-fixed-variant": "#003ab2",
+                    "on-tertiary-fixed": "#00201b",
+                    "surface-container-low": "#f1f4f9",
+                    "on-tertiary-container": "#009580",
+                    "primary-fixed-dim": "#bbc7df",
+                    "on-primary-fixed-variant": "#3c475b",
+                    "background": "#f7f9fe",
+                    "signal-red": "#ED1A22",
+                    "surface-bright": "#f7f9fe",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#b6c4ff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#101c2e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#181c20",
+                    "on-tertiary-fixed-variant": "#005045",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#e4e7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "mono-technical": ["IBM Plex Sans"],
+                    "display-lg-mobile": ["Barlow Condensed"],
+                    "headline-md": ["Barlow Condensed"],
+                    "display-lg": ["Barlow Condensed"],
+                    "label-caps": ["IBM Plex Sans"],
+                    "body-sm": ["IBM Plex Sans"],
+                    "body-md": ["IBM Plex Sans"],
+                    "body-lg": ["IBM Plex Sans"],
+                    "headline-sm": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "mono-technical": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .micro-weave {
+            background-image: radial-gradient(#242833 0.5px, transparent 0.5px);
+            background-size: 4px 4px;
+            opacity: 0.05;
+        }
+        .glass-nav {
+            backdrop-filter: blur(8px);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        #mobile-menu.hidden { display: none; }
+        #mobile-menu:not(.hidden) { display: flex; }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface selection:bg-secondary selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-outline-variant/30 h-20 md:h-28 bg-white">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<a href="index.html"><img alt="Fortitude Fabrics Logo" class="h-16 md:h-24 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uj00okJCjn1XroVeQfNQrdpEwHb0-40VjhWD5PkyKpnuisF6OPupq7UDJHGUejOq0Ui8WvbFWGLkiZYqAAp-xcgAPrzT0tdZR5Gg-Ojbj1iSI9BYb0u99vxCCTZohoLcwJepMfHfiWHQGJhNSlGwYZaEsAHj_7OOameVMmCdodaVYgMjQ3BKksy80V2MiOSOUFFWcg-BTYgx2uWg_AEh-C2PU_8ohIrx2pFRxmSMAmX3kpm0FRTV2tP2vbzjVBtdZEKJivCtvYeQg"/></a>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden lg:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="products.html">Materials</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="industries.html">Industries</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="insights.html">Innovation</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="certifications.html">Quality</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="about.html">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block bg-secondary text-white px-6 py-3 font-label-caps text-label-caps uppercase hover:opacity-90 transition-all" onclick="window.location.href='quote.html'">Request Quote</button>
+<!-- Hamburger Menu Button -->
+<button class="lg:hidden p-2 text-on-surface" id="menu-toggle">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="hidden fixed inset-0 top-16 bg-surface-container-lowest z-40 flex-col p-margin-mobile space-y-6 lg:hidden" id="mobile-menu">
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="products.html">Materials</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="industries.html">Industries</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="insights.html">Innovation</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="certifications.html">Quality</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="about.html">About</a>
+<button class="w-full bg-secondary text-white py-4 font-label-caps text-label-caps uppercase mt-4" onclick="window.location.href='quote.html'">Request Quote</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-deep-onyx overflow-hidden py-16 md:py-24">
+<!-- Abstract Background -->
+<div class="absolute inset-0 micro-weave"></div>
+<div class="absolute inset-0 opacity-20 bg-gradient-to-br from-secondary/20 via-transparent to-transparent"></div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl mx-auto">
+<span class="font-label-caps text-[10px] md:text-label-caps text-secondary-fixed-dim uppercase mb-4 block tracking-[0.2em]">Technical Engineering Division</span>
+<h1 class="font-headline-md md:font-display-lg text-headline-md md:text-display-lg text-surface-bright mb-6 uppercase leading-tight">Request a Technical <br class="hidden md:block"/>Textile Solution</h1>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-surface-variant/80 max-w-2xl mx-auto">
+                Connect with our engineering specialists to specify high-performance fabrics tailored to your exact industrial requirements and compliance standards.
+            </p>
+</div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="A macro close-up of high-performance technical fabric with a sophisticated weave pattern, shown in an industrial laboratory setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-XMj6k3E4vvDb5IGbIw5JkLQlSb_oZLwUFaezso-aIO-Ur7486VtJWLiVe7z0Sstm0vkBHz5yRR7VMPRn2aSbKGJTSssJuPvPk0u2NcJ1-CZ1OCir6yU2Ig837PREwgh8aqqC9HGUBKESB5SJZaYQOLTAPcRL5RPoe1MLo8nkkJUGkwFf9cA3mL6qJtEOIfNspL__gsrmALnDDWcizREYEP_9GGvekJNu1p7KRMja-CLv2SSDWZzHZz29t9fw7ymyOooQS6v85sfw"/>
+</section>
+<!-- Form Section -->
+<section class="relative -mt-12 md:-mt-24 pb-16 md:pb-24 px-margin-mobile">
+<div class="max-w-4xl mx-auto">
+<div class="bg-surface-container-lowest brutalist-border p-6 md:p-12 shadow-2xl relative">
+<!-- Micro-grid indicator -->
+<div class="absolute top-0 right-0 p-4 opacity-10 hidden md:block">
+<span class="material-symbols-outlined text-4xl">architecture</span>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-6 md:gap-y-8">
+<!-- Company -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Company Name</label>
+<input class="w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200 min-h-[48px]" placeholder="Global Logistics Corp" type="text"/>
+</div>
+<!-- Contact Person -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Contact Person</label>
+<input class="w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200 min-h-[48px]" placeholder="Dr. Elena Vance" type="text"/>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Business Email</label>
+<input class="w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200 min-h-[48px]" placeholder="vance.e@example.com" type="email"/>
+</div>
+<!-- Phone -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Phone Number</label>
+<input class="w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200 min-h-[48px]" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<!-- Industry -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Industry Sector</label>
+<input class="w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200 min-h-[48px]" placeholder="E.g. Aerospace &amp; Defense" type="text"/>
+</div>
+<!-- Product Interest -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Product Interest</label>
+<input class="w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200 min-h-[48px]" placeholder="E.g. High-Tensile Polymers" type="text"/>
+</div>
+<!-- Certifications -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Required Certifications</label>
+<input class="w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200 min-h-[48px]" placeholder="ISO 9001, OEKO-TEX, EN 469..." type="text"/>
+</div>
+<!-- Quantity -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Estimated Quantity</label>
+<div class="relative">
+<select class="w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200 appearance-none min-h-[48px]" onchange="toggleCustomQuantity(this.value)">
+<option value="250">250</option>
+<option value="500">500</option>
+<option value="750">750</option>
+<option value="1000">1000</option>
+<option value="1250">1250</option>
+<option value="1500">1500</option>
+<option value="1750">1750</option>
+<option value="2000">2000</option>
+<option value="2250">2250</option>
+<option value="2500">2500</option>
+<option value="2750">2750</option>
+<option value="3000">3000</option>
+<option value="Other">Other</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+<input class="hidden w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200 min-h-[48px] mt-2" id="custom-quantity" placeholder="Enter custom quantity" type="text"/>
+</div>
+<!-- Delivery Country -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Delivery Country</label>
+<input class="w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200 min-h-[48px]" placeholder="Germany" type="text"/>
+</div>
+<!-- File Upload -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Technical Specs / Blueprints</label>
+<div class="relative group h-full">
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" type="file"/>
+<div class="w-full h-full min-h-[48px] border border-dashed border-outline-variant bg-surface-container-low p-3 font-body-sm flex items-center justify-center gap-2 group-hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">upload_file</span>
+<span class="text-on-surface-variant text-sm text-center">Click to upload or drag &amp; drop</span>
+</div>
+</div>
+</div>
+<!-- Notes -->
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Project Scope &amp; Notes</label>
+<textarea class="w-full border border-outline-variant bg-white p-3.5 md:p-3 font-body-md focus:border-secondary focus:ring-0 transition-colors duration-200" placeholder="Detail your specific thermal, mechanical, or chemical resistance requirements here..." rows="4"></textarea>
+</div>
+<!-- Submit -->
+<div class="md:col-span-2 pt-4">
+<button class="w-full md:w-auto bg-secondary text-on-secondary px-12 py-4 font-label-caps text-label-caps uppercase tracking-[0.2em] hover:bg-secondary-container transition-all duration-300 active:scale-[0.99] flex items-center justify-center gap-3 min-h-[56px]" type="submit">
+                            Submit Engineering Request
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+<p class="mt-4 font-body-sm text-body-sm text-on-surface-variant/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">verified_user</span>
+                            Engineering review response: 24-48 hours.
+                        </p>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Engineering Support Info Cards -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-16 md:pb-24 grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-6 border-l-2 border-secondary bg-surface-container-lowest">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-2">Technical Consulting</h3>
+<p class="font-body-md text-on-surface-variant">Our material scientists are available for direct consultation on complex structural fiber projects.</p>
+</div>
+<div class="p-6 border-l-2 border-slate-steel bg-surface-container-lowest">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-2">Compliance Ready</h3>
+<p class="font-body-md text-on-surface-variant">All quotations include full traceability documentation and ISO 9001:2015 verification specs.</p>
+</div>
+<div class="p-6 border-l-2 border-secondary bg-surface-container-lowest">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-2">Global Logistics</h3>
+<p class="font-body-md text-on-surface-variant">Integrated supply chain management ensures precision delivery to over 45 industrial hubs worldwide.</p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-deep-onyx text-white border-t border-slate-steel">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<a href="index.html"><img alt="Fortitude Fabrics Logo" class="h-20 mb-6" src="https://lh3.googleusercontent.com/aida/ADBb0uj00okJCjn1XroVeQfNQrdpEwHb0-40VjhWD5PkyKpnuisF6OPupq7UDJHGUejOq0Ui8WvbFWGLkiZYqAAp-xcgAPrzT0tdZR5Gg-Ojbj1iSI9BYb0u99vxCCTZohoLcwJepMfHfiWHQGJhNSlGwYZaEsAHj_7OOameVMmCdodaVYgMjQ3BKksy80V2MiOSOUFFWcg-BTYgx2uWg_AEh-C2PU_8ohIrx2pFRxmSMAmX3kpm0FRTV2tP2vbzjVBtdZEKJivCtvYeQg"/></a>
+<p class="font-body-sm text-on-primary-container mb-8">Technical textiles and industrial workwear precision-engineered in Hyderabad, India for the global market.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-6 md:mb-8">Contact HQ</h4>
+<div class="space-y-4 font-body-sm text-on-primary-container">
+<p class="flex items-start gap-3"><span class="material-symbols-outlined text-white text-base">location_on</span>Plot 124, Industrial Area Phase II,<br/>Hyderabad, Telangana, 500072</p>
+<p class="flex items-center gap-3"><span class="material-symbols-outlined text-white text-base">call</span>+91 40 2300 8899</p>
+<p class="flex items-center gap-3"><span class="material-symbols-outlined text-white text-base">mail</span>inquiry@fortitudefabrics.com</p>
+</div>
+</div>
+<div class="hidden sm:block">
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-8">Quick Links</h4>
+<ul class="space-y-3 font-body-sm text-on-primary-container">
+<li><a class="hover:text-white transition-all" href="#">Antistatic Data</a></li>
+<li><a class="hover:text-white transition-all" href="#">Cleanroom Guidelines</a></li>
+<li><a class="hover:text-white transition-all" href="#">Sustainability</a></li>
+<li><a class="hover:text-white transition-all" href="#">ISO Docs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-6 md:mb-8">Compliance</h4>
+<ul class="space-y-3 font-body-sm text-on-primary-container">
+<li><a class="hover:text-white transition-all" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-all" href="#">Terms of Service</a></li>
+<li><a class="hover:text-white transition-all" href="#">Material SDS</a></li>
+</ul>
+<div class="mt-8 border-t border-slate-steel pt-6">
+<span class="font-mono-technical text-mono-technical text-on-primary-container uppercase text-[10px]">© 2024 Fortitude Fabrics.</span>
+</div>
+</div>
+</div>
+<div class="bg-black py-4 text-center border-t border-slate-steel px-margin-mobile">
+<p class="font-mono-technical text-[10px] text-on-primary-container uppercase tracking-widest">TEX-ENGINEERED MANUFACTURING • TECHNICAL PRECISION GUARANTEED</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for form inputs
+        document.querySelectorAll('input, select, textarea').forEach(el => {
+            el.addEventListener('focus', () => {
+                const label = el.closest('.flex-col')?.querySelector('label');
+                if (label) label.classList.add('text-secondary');
+            });
+            el.addEventListener('blur', () => {
+                const label = el.closest('.flex-col')?.querySelector('label');
+                if (label) label.classList.remove('text-secondary');
+            });
+        });
+
+        // Simple form submission animation
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Processing...';
+            btn.style.pointerEvents = 'none';
+            btn.classList.add('opacity-80');
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Request Transmitted';
+                btn.classList.remove('bg-secondary');
+                btn.classList.add('bg-tertiary-fixed-dim', 'text-on-tertiary-fixed');
+            }, 1500);
+        });
+    </script>
+<script>
+    function toggleAccordion(id) {
+        const content = document.getElementById(`content-${id}`);
+        const icon = document.getElementById(`icon-${id}`);
+        const isHidden = content.classList.contains('hidden');
+        
+        // Close all
+        document.querySelectorAll('[id^="content-"]').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('[id^="icon-"]').forEach(el => el.innerText = 'add');
+
+        if (isHidden) {
+            content.classList.remove('hidden');
+            icon.innerText = 'remove';
+        }
+    }
+
+    // Mobile Menu Logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuToggle.querySelector('.material-symbols-outlined');
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+            mobileMenu.classList.add('hidden');
+            menuIcon.innerText = 'menu';
+            document.body.style.overflow = '';
+        } else {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.innerText = 'close';
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    // Close menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.innerText = 'menu';
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {}
+        });
+    });
+
+    function toggleCustomQuantity(val) {
+        const customInput = document.getElementById('custom-quantity');
+        if(val === 'Other') {
+            customInput.classList.remove('hidden');
+            customInput.focus();
+        } else {
+            customInput.classList.add('hidden');
+        }
+    }
+</script></body></html>

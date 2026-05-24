@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Industries | Fortitude Fabrics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#79849b",
+                    "deep-onyx": "#121212",
+                    "secondary-container": "#0056fd",
+                    "on-background": "#181c20",
+                    "tertiary-fixed-dim": "#41ddc2",
+                    "tertiary": "#000000",
+                    "on-primary-fixed": "#101c2e",
+                    "on-primary": "#ffffff",
+                    "secondary": "#0042c7",
+                    "surface-container-high": "#e6e8ed",
+                    "on-secondary-fixed": "#001550",
+                    "surface-variant": "#e0e2e7",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#d7e3fc",
+                    "surface-container-highest": "#e0e2e7",
+                    "outline": "#75777d",
+                    "tertiary-container": "#00201b",
+                    "primary": "#000000",
+                    "surface": "#f7f9fe",
+                    "outline-variant": "#c5c6cd",
+                    "inverse-primary": "#bbc7df",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dce1ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eceef3",
+                    "on-surface-variant": "#45474c",
+                    "inverse-surface": "#2d3135",
+                    "tertiary-fixed": "#65fade",
+                    "surface-dim": "#d8dadf",
+                    "slate-steel": "#242833",
+                    "inverse-on-surface": "#eff1f6",
+                    "surface-tint": "#535f74",
+                    "on-secondary-fixed-variant": "#003ab2",
+                    "on-tertiary-fixed": "#00201b",
+                    "surface-container-low": "#f1f4f9",
+                    "on-tertiary-container": "#009580",
+                    "primary-fixed-dim": "#bbc7df",
+                    "on-primary-fixed-variant": "#3c475b",
+                    "background": "#f7f9fe",
+                    "signal-red": "#ED1A22",
+                    "surface-bright": "#f7f9fe",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#b6c4ff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#101c2e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#181c20",
+                    "on-tertiary-fixed-variant": "#005045",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#e4e7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "mono-technical": ["IBM Plex Sans"],
+                    "display-lg-mobile": ["Barlow Condensed"],
+                    "headline-md": ["Barlow Condensed"],
+                    "display-lg": ["Barlow Condensed"],
+                    "label-caps": ["IBM Plex Sans"],
+                    "body-sm": ["IBM Plex Sans"],
+                    "body-md": ["IBM Plex Sans"],
+                    "body-lg": ["IBM Plex Sans"],
+                    "headline-sm": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "mono-technical": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .micro-weave {
+            background-image: radial-gradient(#242833 0.5px, transparent 0.5px);
+            background-size: 4px 4px;
+            opacity: 0.05;
+        }
+        .glass-nav {
+            backdrop-filter: blur(8px);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        #mobile-menu.hidden { display: none; }
+        #mobile-menu:not(.hidden) { display: flex; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-outline-variant/30 h-20 md:h-28 bg-white">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<a href="index.html"><img alt="Fortitude Fabrics Logo" class="h-16 md:h-24 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uj00okJCjn1XroVeQfNQrdpEwHb0-40VjhWD5PkyKpnuisF6OPupq7UDJHGUejOq0Ui8WvbFWGLkiZYqAAp-xcgAPrzT0tdZR5Gg-Ojbj1iSI9BYb0u99vxCCTZohoLcwJepMfHfiWHQGJhNSlGwYZaEsAHj_7OOameVMmCdodaVYgMjQ3BKksy80V2MiOSOUFFWcg-BTYgx2uWg_AEh-C2PU_8ohIrx2pFRxmSMAmX3kpm0FRTV2tP2vbzjVBtdZEKJivCtvYeQg"/></a>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden lg:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="products.html">Materials</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="industries.html">Industries</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="insights.html">Innovation</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="certifications.html">Quality</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="about.html">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block bg-secondary text-white px-6 py-3 font-label-caps text-label-caps uppercase hover:opacity-90 transition-all" onclick="window.location.href='quote.html'">Request Quote</button>
+<!-- Hamburger Menu Button -->
+<button class="lg:hidden p-2 text-on-surface" id="menu-toggle">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="hidden fixed inset-0 top-16 bg-surface-container-lowest z-40 flex-col p-margin-mobile space-y-6 lg:hidden" id="mobile-menu">
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="products.html">Materials</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="industries.html">Industries</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="insights.html">Innovation</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="certifications.html">Quality</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="about.html">About</a>
+<button class="w-full bg-secondary text-white py-4 font-label-caps text-label-caps uppercase mt-4" onclick="window.location.href='quote.html'">Request Quote</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-surface-container-low overflow-hidden blueprint-grid border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24 flex flex-col items-start gap-6 relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary text-on-primary font-mono-technical text-mono-technical">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="">ISO 9001:2015 COMPLIANT</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background max-w-3xl leading-tight">
+                    Serving Industries Where <span class="text-secondary">Precision</span> Matters.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Our technical textiles are engineered for zero-compromise environments. From Class 100 cleanrooms to high-heat industrial zones, we provide the structural integrity required for modern engineering.
+                </p>
+</div>
+<!-- Decorative Visual -->
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-10 pointer-events-none hidden lg:block weave-pattern"></div>
+</section>
+<!-- Industry Grid Section -->
+<section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Semiconductor -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 group hover:border-secondary transition-colors duration-300">
+<div class="aspect-video w-full overflow-hidden relative">
+<img alt="Semiconductor manufacturing facility" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0ug7oI1MxA7KaJyoVSDWyirjzr-e_A2IuQfUiEXTO-58wmKMj4qbzjNzwj_acoL-ZPQfzy8R3fDDXbOowrAEQmPO5NVeBknnRkj34posn6q6j1tDOqGzrM5U1DU2uCv7br3M0cjscaN8Kpnd718RLbSyYCGHHhmn53hPcGd8NJUF5UHjYiJ2qW1TJrBMFwdRQCn6F3l-1ovPSLceNM5SCZ5_kbiQULYcu8BXuvjUVZHPQcfQY583HIH3NJJi"/>
+<div class="absolute inset-0 bg-secondary/5 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="p-6 md:p-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="memory">memory</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wide">Semiconductor</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Ultra-low linting and static-dissipative fabrics designed for sub-micron particle control in wafer fabrication cleanrooms.
+                        </p>
+<div class="font-label-caps text-label-caps text-secondary flex items-center gap-2 group-hover:gap-4 transition-all cursor-pointer">
+                            SPECIFICATIONS <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Pharmaceuticals -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 group hover:border-secondary transition-colors duration-300">
+<div class="p-6 md:p-8 h-full flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="biotech">biotech</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wide">Pharmaceuticals</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-auto">
+                            Biocompatible filtration media and protective garments resistant to aggressive chemical sterilization and autoclaving.
+                        </p>
+<div class="mt-8 pt-8 border-t border-outline-variant/10">
+<div class="font-label-caps text-label-caps text-on-surface-variant opacity-60 mb-2">KEY COMPLIANCE</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container px-2 py-1 text-[10px] font-mono-technical">FDA-21</span>
+<span class="bg-surface-container px-2 py-1 text-[10px] font-mono-technical">EU-GMP</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Electronics -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 group hover:border-secondary transition-colors duration-300 overflow-hidden">
+<div class="p-6 md:p-8 h-full flex flex-col weave-pattern">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="settings_input_component">settings_input_component</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wide">Electronics</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            ESD-safe materials for sensitive assembly lines, ensuring zero electrostatic discharge interference with circuitry.
+                        </p>
+<div class="mt-auto pt-8">
+<div class="font-label-caps text-label-caps text-secondary flex items-center gap-2 group-hover:gap-4 transition-all cursor-pointer">
+                                VIEW CASE STUDY <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Healthcare -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 group hover:border-secondary transition-colors duration-300">
+<div class="p-6 md:p-8 h-full flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="medical_services">medical_services</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wide">Healthcare</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Anti-microbial and fluid-repellent medical-grade textiles for surgical environments and critical care units.
+                        </p>
+</div>
+</article>
+<!-- Automotive -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 group hover:border-secondary transition-colors duration-300">
+<div class="p-6 md:p-8 h-full flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="directions_car">directions_car</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wide">Automotive</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Heat-shielding and vibration-dampening textiles optimized for the high-temperature requirements of next-gen propulsion.
+                        </p>
+</div>
+</article>
+<!-- Food Processing -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 group hover:border-secondary transition-colors duration-300">
+<div class="p-6 md:p-8 h-full flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="restaurant">restaurant</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wide">Food Processing</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            HACCP-compliant materials designed for easy sanitation and resistance to biological contaminants.
+                        </p>
+</div>
+</article>
+<!-- Laboratories -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 group hover:border-secondary transition-colors duration-300">
+<div class="p-6 md:p-8 h-full flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="science">science</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wide">Laboratories</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Specialized benchtop surface protectors and analytical-grade filtration papers for R&amp;D facilities.
+                        </p>
+</div>
+</article>
+<!-- Manufacturing -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 group hover:border-secondary transition-colors duration-300">
+<div class="p-6 md:p-8 h-full flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="factory">factory</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wide">Manufacturing</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Heavy-duty industrial reinforcement fabrics providing structural integrity for composite manufacturing.
+                        </p>
+</div>
+</article>
+<!-- Hospitality -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 group hover:border-secondary transition-colors duration-300">
+<div class="p-6 md:p-8 h-full flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="hotel">hotel</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wide">Hospitality</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            High-durability technical linens designed for extreme-volume laundering cycles in commercial settings.
+                        </p>
+</div>
+</article>
+<!-- Educational Institutions -->
+<article class="bg-surface-container-lowest border border-outline-variant/30 group hover:border-secondary transition-colors duration-300 lg:col-span-3">
+<div class="p-6 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 blueprint-grid">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="school">school</span>
+<h3 class="font-headline-sm text-headline-sm uppercase tracking-wide">Educational Institutions</h3>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                                Furnishing academic research labs with high-performance protective textiles that withstand student-level rigorous use while maintaining safety standards.
+                            </p>
+</div>
+<div class="w-full md:w-1/3">
+<button class="w-full border-2 border-primary py-4 px-6 font-label-caps text-label-caps uppercase hover:bg-primary hover:text-on-primary transition-all active:scale-[0.98]">
+                                Academic Partnerships
+                            </button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Compliance Banner -->
+<section class="bg-primary py-16 md:py-20 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="text-on-primary space-y-4 max-w-2xl text-center md:text-left">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md uppercase">Zero Compromise Precision</h2>
+<p class="font-body-md opacity-80">Our manufacturing protocols adhere to the strictest global compliance frameworks. Every fiber is documented, every weave is verified.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 w-full md:w-auto">
+<div class="border border-white/20 p-4 text-center">
+<div class="text-on-primary font-headline-md text-xl md:text-2xl">ISO 9001</div>
+<div class="text-[10px] text-white/50 font-label-caps">QUALITY MGMT</div>
+</div>
+<div class="border border-white/20 p-4 text-center">
+<div class="text-on-primary font-headline-md text-xl md:text-2xl">ISO 14001</div>
+<div class="text-[10px] text-white/50 font-label-caps">ENVIRONMENTAL</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Data Table -->
+<section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md mb-8 md:mb-12 uppercase border-l-4 border-secondary pl-4">Standard Technical Tolerances</h2>
+<div class="table-responsive-container overflow-x-auto border border-outline-variant/30">
+<table class="w-full text-left font-mono-technical min-w-[800px]">
+<thead>
+<tr class="bg-secondary text-on-secondary">
+<th class="p-4 font-label-caps whitespace-nowrap">MATERIAL SERIES</th>
+<th class="p-4 font-label-caps whitespace-nowrap text-center">PARTICLE RETENTION (µm)</th>
+<th class="p-4 font-label-caps whitespace-nowrap text-center">AIR PERMEABILITY (cm³/cm²/s)</th>
+<th class="p-4 font-label-caps whitespace-nowrap text-center">SURFACE RESISTANCE (Ω)</th>
+<th class="p-4 font-label-caps whitespace-nowrap text-center">THERMAL RANGE (°C)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-4 font-bold whitespace-nowrap border-r border-outline-variant/10">FF-SC-900 (Semiconductor)</td>
+<td class="p-4 text-center">0.1 - 0.3</td>
+<td class="p-4 text-center">12.5</td>
+<td class="p-4 text-center">10⁶ - 10⁹</td>
+<td class="p-4 text-center">-50 to +180</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="p-4 font-bold whitespace-nowrap border-r border-outline-variant/10">FF-PH-200 (Pharmaceutical)</td>
+<td class="p-4 text-center">0.5 - 2.0</td>
+<td class="p-4 text-center">8.2</td>
+<td class="p-4 text-center">N/A</td>
+<td class="p-4 text-center">-20 to +250</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-4 font-bold whitespace-nowrap border-r border-outline-variant/10">FF-EL-400 (Electronics)</td>
+<td class="p-4 text-center">1.0 - 5.0</td>
+<td class="p-4 text-center">22.0</td>
+<td class="p-4 text-center">10⁴ - 10⁶</td>
+<td class="p-4 text-center">-10 to +120</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mt-4 text-body-sm text-on-surface-variant opacity-60 md:hidden flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">swipe_left</span>
+    Swipe left to view complete technical specifications
+</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-onyx text-white border-t border-slate-steel">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<a href="index.html"><img alt="Fortitude Fabrics Logo" class="h-20 mb-6" src="https://lh3.googleusercontent.com/aida/ADBb0uj00okJCjn1XroVeQfNQrdpEwHb0-40VjhWD5PkyKpnuisF6OPupq7UDJHGUejOq0Ui8WvbFWGLkiZYqAAp-xcgAPrzT0tdZR5Gg-Ojbj1iSI9BYb0u99vxCCTZohoLcwJepMfHfiWHQGJhNSlGwYZaEsAHj_7OOameVMmCdodaVYgMjQ3BKksy80V2MiOSOUFFWcg-BTYgx2uWg_AEh-C2PU_8ohIrx2pFRxmSMAmX3kpm0FRTV2tP2vbzjVBtdZEKJivCtvYeQg"/></a>
+<p class="font-body-sm text-on-primary-container mb-8">Technical textiles and industrial workwear precision-engineered in Hyderabad, India for the global market.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-6 md:mb-8">Contact HQ</h4>
+<div class="space-y-4 font-body-sm text-on-primary-container">
+<p class="flex items-start gap-3"><span class="material-symbols-outlined text-white text-base">location_on</span>Plot 124, Industrial Area Phase II,<br/>Hyderabad, Telangana, 500072</p>
+<p class="flex items-center gap-3"><span class="material-symbols-outlined text-white text-base">call</span>+91 40 2300 8899</p>
+<p class="flex items-center gap-3"><span class="material-symbols-outlined text-white text-base">mail</span>inquiry@fortitudefabrics.com</p>
+</div>
+</div>
+<div class="hidden sm:block">
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-8">Quick Links</h4>
+<ul class="space-y-3 font-body-sm text-on-primary-container">
+<li><a class="hover:text-white transition-all" href="#">Antistatic Data</a></li>
+<li><a class="hover:text-white transition-all" href="#">Cleanroom Guidelines</a></li>
+<li><a class="hover:text-white transition-all" href="#">Sustainability</a></li>
+<li><a class="hover:text-white transition-all" href="#">ISO Docs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-6 md:mb-8">Compliance</h4>
+<ul class="space-y-3 font-body-sm text-on-primary-container">
+<li><a class="hover:text-white transition-all" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-all" href="#">Terms of Service</a></li>
+<li><a class="hover:text-white transition-all" href="#">Material SDS</a></li>
+</ul>
+<div class="mt-8 border-t border-slate-steel pt-6">
+<span class="font-mono-technical text-mono-technical text-on-primary-container uppercase text-[10px]">© 2024 Fortitude Fabrics.</span>
+</div>
+</div>
+</div>
+<div class="bg-black py-4 text-center border-t border-slate-steel px-margin-mobile">
+<p class="font-mono-technical text-[10px] text-on-primary-container uppercase tracking-widest">TEX-ENGINEERED MANUFACTURING • TECHNICAL PRECISION GUARANTEED</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for technical cards
+        document.querySelectorAll('article').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                    icon.style.transform = 'scale(1.2) rotate(5deg)';
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.transform = 'scale(1) rotate(0deg)';
+                }
+            });
+        });
+    </script>
+<script>
+    function toggleAccordion(id) {
+        const content = document.getElementById(`content-${id}`);
+        const icon = document.getElementById(`icon-${id}`);
+        const isHidden = content.classList.contains('hidden');
+        
+        // Close all
+        document.querySelectorAll('[id^="content-"]').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('[id^="icon-"]').forEach(el => el.innerText = 'add');
+
+        if (isHidden) {
+            content.classList.remove('hidden');
+            icon.innerText = 'remove';
+        }
+    }
+
+    // Mobile Menu Logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuToggle.querySelector('.material-symbols-outlined');
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+            mobileMenu.classList.add('hidden');
+            menuIcon.innerText = 'menu';
+            document.body.style.overflow = '';
+        } else {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.innerText = 'close';
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    // Close menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.innerText = 'menu';
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.</script></body></html>

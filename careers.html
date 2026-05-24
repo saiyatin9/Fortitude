@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#79849b",
+                    "deep-onyx": "#121212",
+                    "secondary-container": "#0056fd",
+                    "on-background": "#181c20",
+                    "tertiary-fixed-dim": "#41ddc2",
+                    "tertiary": "#000000",
+                    "on-primary-fixed": "#101c2e",
+                    "on-primary": "#ffffff",
+                    "secondary": "#0042c7",
+                    "surface-container-high": "#e6e8ed",
+                    "on-secondary-fixed": "#001550",
+                    "surface-variant": "#e0e2e7",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#d7e3fc",
+                    "surface-container-highest": "#e0e2e7",
+                    "outline": "#75777d",
+                    "tertiary-container": "#00201b",
+                    "primary": "#000000",
+                    "surface": "#f7f9fe",
+                    "outline-variant": "#c5c6cd",
+                    "inverse-primary": "#bbc7df",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#dce1ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eceef3",
+                    "on-surface-variant": "#45474c",
+                    "inverse-surface": "#2d3135",
+                    "tertiary-fixed": "#65fade",
+                    "surface-dim": "#d8dadf",
+                    "slate-steel": "#242833",
+                    "inverse-on-surface": "#eff1f6",
+                    "surface-tint": "#535f74",
+                    "on-secondary-fixed-variant": "#003ab2",
+                    "on-tertiary-fixed": "#00201b",
+                    "surface-container-low": "#f1f4f9",
+                    "on-tertiary-container": "#009580",
+                    "primary-fixed-dim": "#bbc7df",
+                    "on-primary-fixed-variant": "#3c475b",
+                    "background": "#f7f9fe",
+                    "signal-red": "#ED1A22",
+                    "surface-bright": "#f7f9fe",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#b6c4ff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#101c2e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#181c20",
+                    "on-tertiary-fixed-variant": "#005045",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#e4e7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "mono-technical": ["IBM Plex Sans"],
+                    "display-lg-mobile": ["Barlow Condensed"],
+                    "headline-md": ["Barlow Condensed"],
+                    "display-lg": ["Barlow Condensed"],
+                    "label-caps": ["IBM Plex Sans"],
+                    "body-sm": ["IBM Plex Sans"],
+                    "body-md": ["IBM Plex Sans"],
+                    "body-lg": ["IBM Plex Sans"],
+                    "headline-sm": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "mono-technical": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .micro-weave {
+            background-image: radial-gradient(#242833 0.5px, transparent 0.5px);
+            background-size: 4px 4px;
+            opacity: 0.05;
+        }
+        .glass-nav {
+            backdrop-filter: blur(8px);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        #mobile-menu.hidden { display: none; }
+        #mobile-menu:not(.hidden) { display: flex; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary selection:text-white">
+<!-- Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 border-b border-outline-variant/30 h-20 md:h-28 bg-white">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<a href="index.html"><img alt="Fortitude Fabrics Logo" class="h-16 md:h-24 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uj00okJCjn1XroVeQfNQrdpEwHb0-40VjhWD5PkyKpnuisF6OPupq7UDJHGUejOq0Ui8WvbFWGLkiZYqAAp-xcgAPrzT0tdZR5Gg-Ojbj1iSI9BYb0u99vxCCTZohoLcwJepMfHfiWHQGJhNSlGwYZaEsAHj_7OOameVMmCdodaVYgMjQ3BKksy80V2MiOSOUFFWcg-BTYgx2uWg_AEh-C2PU_8ohIrx2pFRxmSMAmX3kpm0FRTV2tP2vbzjVBtdZEKJivCtvYeQg"/></a>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden lg:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="products.html">Materials</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="industries.html">Industries</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="insights.html">Innovation</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="certifications.html">Quality</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase font-headline-sm text-[18px] tracking-[0.08em] leading-[24px]" href="about.html">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block bg-secondary text-white px-6 py-3 font-label-caps text-label-caps uppercase hover:opacity-90 transition-all" onclick="window.location.href='quote.html'">Request Quote</button>
+<!-- Hamburger Menu Button -->
+<button class="lg:hidden p-2 text-on-surface" id="menu-toggle">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="hidden fixed inset-0 top-16 bg-surface-container-lowest z-40 flex-col p-margin-mobile space-y-6 lg:hidden" id="mobile-menu">
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="products.html">Materials</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="industries.html">Industries</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="insights.html">Innovation</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="certifications.html">Quality</a>
+<a class="text-headline-md uppercase border-b border-outline-variant/30 pb-4" href="about.html">About</a>
+<button class="w-full bg-secondary text-white py-4 font-label-caps text-label-caps uppercase mt-4" onclick="window.location.href='quote.html'">Request Quote</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[80vh] md:h-[819px] min-h-[500px] flex items-center bg-primary text-on-primary overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 grayscale contrast-125" data-alt="A high-contrast industrial wide-angle shot of a state-of-the-art textile manufacturing facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCymuCjHLxoD1XhlIgJGuiKeDk5pNiRL63o30yxXkVfsi9ArA6eahddjLIdBoZpE-SdyXIUh2UuXisXzWXDNu8EnNH9sfl3Z9DLwMaFdnMm-VuO9JVWSpu2lc1WoBvJvCkoUNAa4SI7vUmQhoLJeABU9SXkt3PPFUzsyN3zb0l6VKF6pXKTHFKspGiKVqnDKAvaKaFmZDkqaUZosSHK_15GD2uPiqJcYBby4yfd5qX_dDGQsu-ZqniaNYmFp7PXzhPiofvrZz3eQqAj"/>
+<div class="absolute inset-0 industrial-grid"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-3xl">
+<span class="inline-block bg-signal-red px-3 py-1 font-mono-technical text-label-caps mb-4 md:mb-6">CAREERS</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-4 md:mb-6 uppercase leading-tight">Build the Future of Technical Textiles</h1>
+<p class="font-body-lg text-body-md md:text-body-lg text-surface-variant/80 max-w-xl mb-8 md:mb-10">
+                        Join a team of elite engineers, quality specialists, and innovators redefining industrial structural integrity. Precision is our baseline; excellence is our output.
+                    </p>
+<a class="inline-flex items-center gap-4 bg-surface-bright text-primary px-6 md:px-8 py-3 md:py-4 font-label-caps text-label-caps hover:bg-secondary hover:text-on-secondary transition-colors duration-300" href="#departments">
+                        VIEW OPPORTUNITIES
+                        <span class="material-symbols-outlined" data-icon="arrow_downward">arrow_downward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Why Work With Us (Bento Grid) -->
+<section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-12 md:mb-16">
+<p class="font-label-caps text-label-caps text-secondary mb-2">OUR CULTURE</p>
+<h2 class="font-display-lg text-3xl md:text-display-lg uppercase">Engineering Potential</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-gutter">
+<!-- Large Feature Card -->
+<div class="md:col-span-8 bg-surface-container border border-slate-steel/10 p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6 md:p-8">
+<span class="material-symbols-outlined text-3xl md:text-4xl text-secondary/20" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">Modern Environment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
+                            Operate within a clinical-grade manufacturing facility equipped with the latest ISO-compliant automation. Our workspaces are designed for focus, safety, and technical fluidity.
+                        </p>
+</div>
+<div class="mt-8 md:mt-12">
+<img class="w-full h-48 md:h-64 object-cover border border-slate-steel/20" data-alt="A close-up shot of a modern engineer inspecting a high-density synthetic weave." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoMZjOk2aCwJ51lNpqjYPqFRHk-9fMnjkzmANbWm0ajT8s5f9WNyeg-FzRAAwSJlYeEHaPre-IzIVzRLq52csLIfb9eIXdIkXrB4PK32h11cOaFIlJ2I_9-NZ-Rc-shxSTQ_l7SQFjQ0olLGwspcthAhU8GYnAR5HNCi375WyvSngKXH7WM_2aF6aLVv9O4xDsLTn-PlhysxkwKu3xfzT6l1cOosC12yE16q4hjrgVbwuntXLTaBdQ9Sz_pCq02Fa_QFDEPLmfL0-n"/>
+</div>
+</div>
+<!-- Tall Side Card -->
+<div class="md:col-span-4 bg-primary text-on-primary p-8 md:p-12 border border-primary relative">
+<div class="absolute inset-0 weave-pattern opacity-20"></div>
+<div class="relative z-10 h-full flex flex-col">
+<h3 class="font-headline-md text-headline-md mb-6 uppercase">Safety Protocol</h3>
+<p class="font-body-md text-body-md text-surface-variant mb-8">
+                            Our 'Zero-Incident' mandate isn't just a policy—it's the foundation of our workflow. We invest heavily in advanced protective systems and ergonomics for every operator.
+                        </p>
+<div class="mt-auto bg-surface-bright/10 p-6 border border-surface-bright/20">
+<p class="font-mono-technical text-label-caps text-tertiary-fixed mb-2">COMPLIANCE STATS</p>
+<p class="font-display-lg text-4xl md:text-display-lg leading-none">1,450+</p>
+<p class="font-body-sm text-body-sm uppercase">Days without injury</p>
+</div>
+</div>
+</div>
+<!-- Bottom Row Cards -->
+<div class="md:col-span-4 border border-slate-steel/10 p-8 hover:border-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4" data-icon="trending_up">trending_up</span>
+<h4 class="font-headline-sm text-headline-sm mb-2 uppercase">Exponential Growth</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                        Technical training pathways and certification reimbursement to keep your skills at the cutting edge of textile science.
+                    </p>
+</div>
+<div class="md:col-span-4 border border-slate-steel/10 p-8 hover:border-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4" data-icon="biotech">biotech</span>
+<h4 class="font-headline-sm text-headline-sm mb-2 uppercase">R&amp;D Freedom</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                        Our internal labs encourage cross-departmental experimentation. If you have an idea for a more durable weave, we build the prototype.
+                    </p>
+</div>
+<div class="md:col-span-4 border border-slate-steel/10 p-8 hover:border-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4" data-icon="verified">verified</span>
+<h4 class="font-headline-sm text-headline-sm mb-2 uppercase">Quality Ownership</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                        Every employee is an auditor. We empower you to pause production if standards aren't met, ensuring only perfection leaves the floor.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Departments Section (Table/Utility List) -->
+<section class="bg-surface-container-low py-16 md:py-24 px-margin-mobile md:px-margin-desktop" id="departments">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-4">
+<div>
+<p class="font-label-caps text-label-caps text-secondary mb-2">CAREER PATHS</p>
+<h2 class="font-display-lg text-3xl md:text-display-lg uppercase">Global Departments</h2>
+</div>
+<div class="flex gap-4">
+<span class="flex items-center gap-2 font-mono-technical text-label-caps text-on-surface-variant bg-surface-container px-4 py-2 border border-slate-steel/10">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span> 14 OPEN ROLES
+                        </span>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-slate-steel/10 overflow-x-auto">
+<!-- Headings for desktop -->
+<div class="min-w-[800px] md:min-w-0 grid grid-cols-12 bg-primary text-on-primary p-4 font-label-caps text-label-caps hidden md:grid">
+<div class="col-span-4">DEPARTMENT</div>
+<div class="col-span-5">CORE FOCUS</div>
+<div class="col-span-3 text-right">OPPORTUNITIES</div>
+</div>
+<!-- Dept Item -->
+<div class="flex flex-col md:grid md:grid-cols-12 p-6 md:p-8 border-b border-slate-steel/10 hover:bg-surface-container-low transition-colors duration-200 group">
+<div class="md:col-span-4 flex items-center gap-4 mb-3 md:mb-0">
+<span class="material-symbols-outlined text-secondary" data-icon="settings_suggest">settings_suggest</span>
+<span class="font-headline-sm text-headline-sm uppercase">Production</span>
+</div>
+<div class="md:col-span-5 font-body-md text-on-surface-variant mb-4 md:mb-0">
+                            High-volume automated weaving, polymer extrusion, and structural composite assembly.
+                        </div>
+<div class="md:col-span-3 flex justify-between md:justify-end items-center">
+<span class="bg-surface-container px-3 py-1 font-mono-technical text-label-caps">6 ROLES</span>
+<span class="material-symbols-outlined opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity translate-x-0 md:translate-x-4 group-hover:translate-x-0" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Dept Item -->
+<div class="flex flex-col md:grid md:grid-cols-12 p-6 md:p-8 border-b border-slate-steel/10 hover:bg-surface-container-low transition-colors duration-200 group">
+<div class="md:col-span-4 flex items-center gap-4 mb-3 md:mb-0">
+<span class="material-symbols-outlined text-secondary" data-icon="science">science</span>
+<span class="font-headline-sm text-headline-sm uppercase">Engineering &amp; R&amp;D</span>
+</div>
+<div class="md:col-span-5 font-body-md text-on-surface-variant mb-4 md:mb-0">
+                            Material science, textile structural engineering, and automated systems development.
+                        </div>
+<div class="md:col-span-3 flex justify-between md:justify-end items-center">
+<span class="bg-surface-container px-3 py-1 font-mono-technical text-label-caps">3 ROLES</span>
+<span class="material-symbols-outlined opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity translate-x-0 md:translate-x-4 group-hover:translate-x-0" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Dept Item -->
+<div class="flex flex-col md:grid md:grid-cols-12 p-6 md:p-8 border-b border-slate-steel/10 hover:bg-surface-container-low transition-colors duration-200 group">
+<div class="md:col-span-4 flex items-center gap-4 mb-3 md:mb-0">
+<span class="material-symbols-outlined text-secondary" data-icon="fact_check">fact_check</span>
+<span class="font-headline-sm text-headline-sm uppercase">Quality Assurance</span>
+</div>
+<div class="md:col-span-5 font-body-md text-on-surface-variant mb-4 md:mb-0">
+                            Clinical testing, stress simulation, and ISO 9001 compliance monitoring.
+                        </div>
+<div class="col-span-3 flex justify-between md:justify-end items-center">
+<span class="bg-surface-container px-3 py-1 font-mono-technical text-label-caps">2 ROLES</span>
+<span class="material-symbols-outlined opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity translate-x-0 md:translate-x-4 group-hover:translate-x-0" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Dept Item -->
+<div class="flex flex-col md:grid md:grid-cols-12 p-6 md:p-8 hover:bg-surface-container-low transition-colors duration-200 group">
+<div class="md:col-span-4 flex items-center gap-4 mb-3 md:mb-0">
+<span class="material-symbols-outlined text-secondary" data-icon="handshake">handshake</span>
+<span class="font-headline-sm text-headline-sm uppercase">Sales &amp; Supply Chain</span>
+</div>
+<div class="md:col-span-5 font-body-md text-on-surface-variant mb-4 md:mb-0">
+                            B2B technical consulting, logistics optimization, and global raw material procurement.
+                        </div>
+<div class="md:col-span-3 flex justify-between md:justify-end items-center">
+<span class="bg-surface-container px-3 py-1 font-mono-technical text-label-caps">3 ROLES</span>
+<span class="material-symbols-outlined opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity translate-x-0 md:translate-x-4 group-hover:translate-x-0" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-12 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="bg-slate-steel p-8 md:p-20 relative text-surface-bright flex flex-col items-center gap-12">
+<div class="absolute inset-0 weave-pattern opacity-10"></div>
+<div class="relative z-10 w-full max-w-2xl text-center">
+<h2 class="font-display-lg text-3xl md:text-display-lg uppercase mb-6 leading-tight">Don't see the right fit?</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-surface-variant/70 mb-10 mx-auto">
+                        We are always seeking exceptional talent to strengthen our ranks. Submit your technical portfolio or resume for our talent pool, and our engineering leads will review your credentials.
+                    </p>
+<form class="space-y-6 text-left">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-surface-variant">Full Name</label>
+<input class="bg-white/5 border border-white/20 text-surface-bright p-3 focus:border-secondary focus:ring-0 outline-none transition-colors w-full" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-surface-variant">Email Address</label>
+<input class="bg-white/5 border border-white/20 text-surface-bright p-3 focus:border-secondary focus:ring-0 outline-none transition-colors w-full" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-surface-variant">Technical Specialization</label>
+<div class="relative">
+<select class="bg-white/5 border border-white/20 text-surface-bright p-3 focus:border-secondary focus:ring-0 outline-none transition-colors appearance-none w-full">
+<option class="bg-slate-steel">Select Specialty</option>
+<option class="bg-slate-steel">Material Engineering</option>
+<option class="bg-slate-steel">Production Lead</option>
+<option class="bg-slate-steel">Data Analysis</option>
+<option class="bg-slate-steel">Industrial Design</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none opacity-50" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="border-2 border-dashed border-white/20 p-8 text-center hover:border-secondary transition-colors cursor-pointer group bg-white/5">
+<span class="material-symbols-outlined text-4xl mb-2 text-white/40 group-hover:text-secondary" data-icon="upload_file">upload_file</span>
+<p class="font-label-caps text-label-caps uppercase">Upload Resume / Portfolio (PDF)</p>
+</div>
+<button class="w-full bg-secondary text-on-secondary py-4 font-label-caps text-label-caps hover:bg-on-secondary-container hover:text-on-primary transition-all duration-300 uppercase tracking-widest active:scale-[0.99]">
+                            Submit to Talent Pool
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-onyx text-white border-t border-slate-steel">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<a href="index.html"><img alt="Fortitude Fabrics Logo" class="h-20 mb-6" src="https://lh3.googleusercontent.com/aida/ADBb0uj00okJCjn1XroVeQfNQrdpEwHb0-40VjhWD5PkyKpnuisF6OPupq7UDJHGUejOq0Ui8WvbFWGLkiZYqAAp-xcgAPrzT0tdZR5Gg-Ojbj1iSI9BYb0u99vxCCTZohoLcwJepMfHfiWHQGJhNSlGwYZaEsAHj_7OOameVMmCdodaVYgMjQ3BKksy80V2MiOSOUFFWcg-BTYgx2uWg_AEh-C2PU_8ohIrx2pFRxmSMAmX3kpm0FRTV2tP2vbzjVBtdZEKJivCtvYeQg"/></a>
+<p class="font-body-sm text-on-primary-container mb-8">Technical textiles and industrial workwear precision-engineered in Hyderabad, India for the global market.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary transition-all" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-6 md:mb-8">Contact HQ</h4>
+<div class="space-y-4 font-body-sm text-on-primary-container">
+<p class="flex items-start gap-3"><span class="material-symbols-outlined text-white text-base">location_on</span>Plot 124, Industrial Area Phase II,<br/>Hyderabad, Telangana, 500072</p>
+<p class="flex items-center gap-3"><span class="material-symbols-outlined text-white text-base">call</span>+91 40 2300 8899</p>
+<p class="flex items-center gap-3"><span class="material-symbols-outlined text-white text-base">mail</span>inquiry@fortitudefabrics.com</p>
+</div>
+</div>
+<div class="hidden sm:block">
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-8">Quick Links</h4>
+<ul class="space-y-3 font-body-sm text-on-primary-container">
+<li><a class="hover:text-white transition-all" href="#">Antistatic Data</a></li>
+<li><a class="hover:text-white transition-all" href="#">Cleanroom Guidelines</a></li>
+<li><a class="hover:text-white transition-all" href="#">Sustainability</a></li>
+<li><a class="hover:text-white transition-all" href="#">ISO Docs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-secondary mb-6 md:mb-8">Compliance</h4>
+<ul class="space-y-3 font-body-sm text-on-primary-container">
+<li><a class="hover:text-white transition-all" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-all" href="#">Terms of Service</a></li>
+<li><a class="hover:text-white transition-all" href="#">Material SDS</a></li>
+</ul>
+<div class="mt-8 border-t border-slate-steel pt-6">
+<span class="font-mono-technical text-mono-technical text-on-primary-container uppercase text-[10px]">© 2024 Fortitude Fabrics.</span>
+</div>
+</div>
+</div>
+<div class="bg-black py-4 text-center border-t border-slate-steel px-margin-mobile">
+<p class="font-mono-technical text-[10px] text-on-primary-container uppercase tracking-widest">TEX-ENGINEERED MANUFACTURING • TECHNICAL PRECISION GUARANTEED</p>
+</div>
+</footer>
+<script>
+        // Subtle micro-interaction for button press simulation
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'scale(0.98)';
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'scale(1)';
+            });
+        });
+
+        // Sticky Header Tonal Shift
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+<script>
+    function toggleAccordion(id) {
+        const content = document.getElementById(`content-${id}`);
+        const icon = document.getElementById(`icon-${id}`);
+        const isHidden = content.classList.contains('hidden');
+        
+        // Close all
+        document.querySelectorAll('[id^="content-"]').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('[id^="icon-"]').forEach(el => el.innerText = 'add');
+
+        if (isHidden) {
+            content.classList.remove('hidden');
+            icon.innerText = 'remove';
+        }
+    }
+
+    // Mobile Menu Logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuToggle.querySelector('.material-symbols-outlined');
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+            mobileMenu.classList.add('hidden');
+            menuIcon.innerText = 'menu';
+            document.body.style.overflow = '';
+        } else {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.innerText = 'close';
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    // Close menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.innerText = 'menu';
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.</script></body></html>
